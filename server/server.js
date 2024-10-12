@@ -11,15 +11,9 @@ app.use(cors({
   origin: ['http://192.168.100.3:8081', 'http://192.168.100.3:8080']
 }));    
 
-
-
-mongoose.connect("mongodb+srv://maestrocj48:mynativeapp2025@reactnative.j7t9p.mongodb.net/nativedata?retryWrites=true&w=majority&appName=ReactNative", {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-})
+mongoose.connect("mongodb+srv://maestrocj48:mynativeapp2025@reactnative.j7t9p.mongodb.net/nativedata?retryWrites=true&w=majority&appName=ReactNative")
 .then(() => console.log('Connected to MongoDB'))
 .catch((error) => console.log('Error connecting to MongoDB:', error));
-
 
 app.listen(8080,()=>{
   console.log("Port 8080 is live !");
