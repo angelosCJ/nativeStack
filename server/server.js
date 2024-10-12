@@ -11,9 +11,14 @@ app.use(cors({
   origin: ['http://192.168.100.3:8081', 'http://192.168.100.3:8080']
 }));    
 
-mongoose.connect("mongodb+srv://maestrocj48:mynativeapp2025@reactnative.j7t9p.mongodb.net/nativedata?retryWrites=true&w=majority&appName=ReactNative")
+require('dotenv').config();
+
+mongoose.connect(process.env.MONGODB_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+})
 .then(() => console.log('Connected to MongoDB'))
-  .catch((error) => console.log('Error connecting to MongoDB:', error));
+.catch((error) => console.log('Error connecting to MongoDB:', error));
 
 
 app.listen(8080,()=>{
