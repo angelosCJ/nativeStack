@@ -11,7 +11,7 @@ app.use(cors({
   origin: ['http://192.168.100.3:8081', 'http://192.168.100.3:8080']
 }));    
 
-require('dotenv').config();
+
 
 mongoose.connect("mongodb+srv://maestrocj48:mynativeapp2025@reactnative.j7t9p.mongodb.net/nativedata?retryWrites=true&w=majority&appName=ReactNative", {
     useNewUrlParser: true,
