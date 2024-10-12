@@ -13,7 +13,7 @@ app.use(cors({
 
 require('dotenv').config();
 
-mongoose.connect(process.env.MONGODB_URI, {
+mongoose.connect("mongodb+srv://maestrocj48:mynativeapp2025@reactnative.j7t9p.mongodb.net/nativedata?retryWrites=true&w=majority&appName=ReactNative", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 })
